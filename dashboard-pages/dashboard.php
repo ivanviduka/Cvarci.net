@@ -5,7 +5,7 @@ if (!isset($_COOKIE["userIsLoggedIn"])) {
 }
 
 if (isset($_GET["logout"])) {
-    setcookie("userIsLoggedIn", 0, time() - 3600, "/Cvarci.net");
+    setcookie("userIsLoggedIn", 0, time() - 3600, "/");
     header("Location: ../admin.php");
 }
 
