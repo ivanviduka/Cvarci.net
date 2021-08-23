@@ -2,7 +2,7 @@
 
 Heroku link: https://cvarci--net.herokuapp.com/
 
-<b>Napomena:</> Ovdje se nalazi samo završeni projekt, razvojne faze i različite grane na kojima su se radili dijelove koda, nalaze se na privatnom repozitoriju u sklopu fakulteta. 
+<b>Napomena:</b> Ovdje se nalazi samo završeni projekt, razvojne faze i različite grane na kojima su se radili dijelove koda, nalaze se na privatnom repozitoriju u sklopu fakulteta. 
 
 Projekt je rađen u sklopu kolegija Web-programiranje u grupi od 3 studenta.
 
