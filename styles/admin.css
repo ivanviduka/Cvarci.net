@@ -1,0 +1,526 @@
+/*import general styles, margin resets, custom colors, font sizes, button styles, etc.*/
+
+@import "general.css";
+/*--------------------------------------------------------------------------------------*/
+
+/* Header general/layout style */
+
+.header-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*-------------------------------------------*/
+
+/* Header bar */
+
+.header-bar {
+    margin: 2rem 8rem;
+}
+
+.header-bar ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+}
+
+.header-menu-icon {
+    justify-self: start;
+    align-self: center;
+    margin-left: 0.6rem;
+    margin-right: 1rem;
+}
+
+.header-menu-icon a {
+    padding: 1rem 1.5rem;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 70px;
+}
+
+.header-menu-icon a:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.header-logo {
+    justify-self: center;
+    align-self: center;
+}
+
+.header-login-and-shop {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    align-self: center;
+}
+
+.header-login-and-shop a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2rem;
+    white-space: nowrap;
+}
+
+.header-login-and-shop a:first-child i {
+    margin-right: 0.2rem;
+}
+
+.header-login-and-shop a:last-child i {
+    margin-right: 0.1em;
+}
+
+/*-------------------------------------------*/
+
+/* header font styles */
+
+header a {
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--medium-gray-color);
+    padding: 0.3rem;
+}
+
+/*-------------------------------------------*/
+
+/* Header icon sizes and colors*/
+
+.header-menu-icon a i {
+    font-size: 1.5em;
+    color: var(--medium-gray-color);
+}
+
+.header-login-and-shop a:first-child i {
+    font-size: 1.8em;
+    color: var(--medium-gray-color);
+}
+
+.header-login-and-shop a:last-child i {
+    font-size: 1.5em;
+    color: var(--medium-gray-color);
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* shopping cart dropdown general/layout style*/
+
+.shopping-cart {
+    position: relative;
+}
+
+.shopping-cart-dropdown {
+    position: absolute;
+    right: 0.5em;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.25);
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1em);
+    transition: all 0.4s ease;
+}
+
+.shopping-cart-dropdown h4 {
+    color: black;
+}
+
+.shopping-cart-dropdown ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+/*-------------------------------------------*/
+
+/* "arrow" at the top of dropdown menu*/
+
+.shopping-cart-dropdown ul::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0.6em;
+    border: 0.7em solid black;
+    border-color: white white transparent transparent;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: 1px -4px 6px rgba(0, 0, 0, 0.11);
+    clip-path: inset(-1px -4px 0 0);
+}
+
+/*-------------------------------------------*/
+
+/* dropdown menu item layout and styles*/
+
+.shopping-cart-dropdown ul li {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 1em;
+    margin: 0.5em 0;
+}
+
+.shopping-cart ul li picture {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.shopping-cart img {
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.shopping-cart ul li p {
+    grid-column: 2 / 3;
+    white-space: nowrap;
+    color: black;
+}
+
+.cart-item-title {
+    grid-row: 1 / 2;
+    align-self: start;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cart-item-info-text {
+    grid-row: 2 / 3;
+    align-self: start;
+}
+
+.cart-item-info-text p {
+    font-size: 0.8rem;
+}
+
+.shopping-cart ul li a {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    justify-self: end;
+    align-self: start;
+}
+
+.cart-item-price, .cart-item-quantity {
+    font-weight: bold;
+}
+
+.shopping-cart-dropdown input[type="submit"] {
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+}
+
+/*-------------------------------------------*/
+
+/* on click dropdown */
+
+.shopping-cart a:focus+.shopping-cart-dropdown, .shopping-cart-dropdown:hover {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* Login content general/layout style */
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 0 30%;
+    border: 3px solid var(--border-gray-color);
+    border-radius: 6px;
+    box-shadow: 1em 1em var(--yellow-color);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form p {
+    margin: 0 1rem;
+}
+
+.login-form input[type=email], .login-form input[type=password] {
+    border: 2px solid var(--border-gray-color);
+    border-radius: 6px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+    margin: 0 1rem 2rem 1rem;
+    padding: 0.5rem;
+    width: auto;
+}
+
+.login-form input[type=submit] {
+    align-self: flex-end;
+    margin: 1rem;
+    width: 15em;
+    padding: 0.5rem;
+}
+
+#error-msg {
+    text-align: center;
+    color: red;
+    margin: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* Footer general/layout style*/
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 10%;
+}
+
+/*footer social media contains logo(svg), line(hr) and a list of social media icons/links
+contained in "footer-social-media-links"*/
+
+.footer-social-media hr {
+    width: 50%;
+}
+
+.footer-social-media-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footer-social-media-links li {
+    margin-right: 2em;
+}
+
+.footer-social-media-links li a svg {
+    width: 2.3em;
+    height: auto;
+}
+
+/*footer navigation contains two lists, first (about us, price list and contact)
+the second (privacy policy, terms of use and copyright)*/
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer-navigation ul {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    list-style: none;
+}
+
+.footer-navigation ul:nth-child(1) li {
+    margin: 0 10em 0 5em;
+    white-space: nowrap;
+}
+
+.footer-navigation ul:nth-child(1) li:last-child {
+    margin-right: 0;
+}
+
+.footer-navigation ul:nth-child(2) li {
+    margin-right: 4rem;
+}
+
+.footer-navigation ul:nth-child(2) li:last-child {
+    margin: 0;
+}
+
+/*-------------------------------------------*/
+
+/* Footer font styles */
+
+.footer-navigation ul li a {
+    text-decoration: none;
+}
+
+.footer-navigation ul:nth-child(1) li a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--medium-gray-color);
+}
+
+.footer-navigation ul:nth-child(2) li {
+    font-size: 1rem;
+    color: black;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* Responsive layouts for different screen sizes */
+
+@media (max-width: 1127px) {
+    /*footer navigation smaller space between elemetns*/
+    .footer-navigation ul:nth-child(1) li {
+        margin: 0 5em 0 5em;
+        white-space: nowrap;
+    }
+    /*login content smaller margin -> wider*/
+    .login-content {
+        margin: 0 25%;
+    }
+}
+
+@media (max-width: 966px) {
+    /*smaller margin between sections*/
+    body>* {
+        margin: 2.5rem 0;
+    }
+    /*login content smaller margin -> wider*/
+    .login-content {
+        margin: 0 20%;
+    }
+    /*footer different layout*/
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0 20%;
+    }
+    .footer-social-media {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .footer-navigation {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .footer-social-media hr {
+        display: none;
+    }
+    .footer-social-media-links li {
+        margin-left: 2em;
+        margin-right: 0;
+    }
+    .footer-navigation ul:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        list-style: none;
+    }
+    .footer-navigation ul:nth-child(1) li {
+        margin-left: auto;
+        white-space: nowrap;
+    }
+    .footer-navigation ul:nth-child(1) li:last-child {
+        margin-right: 0;
+    }
+    .footer-navigation ul:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1em;
+        align-self: center;
+        margin-top: 1em;
+    }
+    .footer-navigation ul:nth-child(2) li {
+        margin-right: auto;
+    }
+    .footer-navigation ul:nth-child(2) li:last-child {
+        grid-column: 1 / 3;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 715px) {
+    html {
+        font-size: 12px !important
+    }
+    /*login content smaller margin -> wider*/
+    .login-content {
+        margin: 2rem 10% 4rem 10%;
+    }
+    .header-bar {
+        margin: 0 5%;
+    }
+    .footer-content {
+        margin: 0 5%;
+    }
+}
+
+@media (max-width:470px) {
+    .heading1 {
+        font-size: 3.5rem;
+    }
+    /*header bar different layout, now in two rows*/
+    .header-bar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr auto;
+        row-gap: 1em;
+    }
+    .header-menu-icon {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .header-logo {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .header-login-and-shop {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    /*login content smaller margin -> wider*/
+    .login-content {
+        margin: 2rem 5% 4rem 5%;
+    }
+    /*shopping cart dropdown set back to one column
+    !!! without this it splits into two columns for some reason*/
+    .shopping-cart-dropdown ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /*footer different layout, more items put into 1 column*/
+    .footer-social-media {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-self: center;
+    }
+    .footer-social-media svg {
+        align-self: center;
+    }
+    .footer-navigation {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .footer-social-media hr {
+        display: inline;
+        width: 100%;
+    }
+    .footer-social-media-links {
+        align-self: center;
+    }
+    .footer-social-media-links li {
+        margin: 0 1em;
+    }
+    .footer-navigation ul:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .footer-navigation ul:nth-child(1) li {
+        margin: 0;
+        padding: 0;
+        align-self: center;
+    }
+}

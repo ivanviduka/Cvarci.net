@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root
+{
+    --light-gray-color: #F2F4FA;
+    --medium-gray-color: #9093A6;
+    --dark-gray-color: #3F4255;
+    --yellow-color: #FFE500;
+    --light-yellow-color: #FFF7CC;
+    --light-brown-color: #B79C10;
+
+    --border-gray-color: #E8E8E8;
+    --disabled-primary-button-background-color: #E5E5E5;
+    --didabled-primary-button-text-color: #9093A6;
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+html
+{
+    font-size: 16px;
+}
+
+html *
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--dark-gray-color);
+}
+
+body
+{
+    background: #FFFFFF;    
+}
+
+body > *
+{
+    margin: 4.5rem 0;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------*/
+/* Font styles */
+.heading1
+{
+    font-family: 'Roboto', normal;
+    font-size: 4.5rem;
+    font-weight: 300;
+
+    letter-spacing: 0.135em;
+    line-height: 5.5rem;
+}
+
+.heading2
+{
+    font-family: 'Roboto', normal;
+    font-size: 2.25rem;
+    font-weight: 300;
+    
+    letter-spacing: 0.08em;
+    line-height: 3.25rem;
+}
+
+.heading3
+{
+    font-family: 'Roboto', normal;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    line-height: 2rem;
+}
+
+.heading4
+{
+    font-family: 'Roboto', normal;
+    font-size: 1.2rem;
+    font-weight: 300;
+    
+    line-height: 1.2rem;
+}
+
+p
+{
+    font-size: 1.2rem;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------*/
+/* Button styles */
+.btn
+{
+    border-radius: 4px;
+    border-style: none;
+
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.btn:hover
+{
+    cursor: pointer;
+}
+
+.btn-primary
+{
+    background-color: var(--yellow-color);
+    color: var(--light-brown-color);
+    border-style: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover
+{
+    background-color: var(--light-yellow-color);
+}
+
+.btn-primary:disabled
+{
+    background: var(--disabled-primary-button-background-color);
+    color: var(--didabled-primary-button-text-color);
+}
+
+.btn-secondary
+{
+    background-color: var(--light-gray-color);
+    color: var(--medium-gray-color);
+}
+
+.btn-secondary:hover
+{
+    background-color: var(--medium-gray-color);
+    color: var(--dark-gray-color);
+}
+
+.btn-tertiary
+{
+    background-color: white;
+    border: 2px solid var(--yellow-color);
+    padding: 0.5em 1em;
+}
+
+.btn-tertiary:hover
+{
+    background-color: var(--yellow-color);
+}
+
+.btn-subtle
+{
+    background-color: white;
+    color: var(--medium-gray-color);
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 25px;
+}
+
+.btn-subtle:hover
+{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+

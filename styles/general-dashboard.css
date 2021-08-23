@@ -1,0 +1,75 @@
+html,
+body
+{
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: row;
+}
+
+body > *
+{
+    margin-top: 0;
+}
+
+
+/* Navigation basic layout/style*/
+/*------------------------------------------------------------*/
+.navigation
+{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 100%;
+
+    align-items: center;
+
+    border-right: 2px solid var(--border-gray-color);
+}
+
+.navigation *
+{
+    margin: 1rem;
+}
+
+.navigation svg
+{
+    margin: 2rem 0 5rem 0;
+}
+
+.navigation a
+{
+    padding-bottom: 2rem;
+    width: 100%;
+    border-bottom: 2px solid var(--border-gray-color);
+    
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+
+@media (max-width:440px)
+{
+    body
+    {
+        flex-direction: column;
+    }
+
+
+    .navigation
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+
+        align-items: center;
+
+        border-right: none;
+    }
+}

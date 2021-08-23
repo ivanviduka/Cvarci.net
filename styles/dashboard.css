@@ -1,0 +1,35 @@
+/*import general styles, margin resets, custom colors, font sizes, button styles, etc.*/
+@import "general.css";
+@import "general-dashboard.css";
+
+/* User info content layout/style*/
+/*------------------------------------------------------------*/
+.user-info
+{
+    margin-top: 7.5%;
+    margin-left: 5rem;
+}
+
+.heading3
+{
+    font-weight: 300;
+}
+
+
+
+@media (max-width:710px)
+{
+    .user-info
+    {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width:440px)
+{
+    .user-info
+    {
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+}
