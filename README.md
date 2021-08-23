@@ -10,5 +10,5 @@ Logika kreacije narudžbe nije implementirana, s toga klik na gumb kreiraj narud
 Također, u zaglavlju stranice postoji opcija za prijavu. Koristeći podatke
 E-mail: admin@admin.com
 Password: admin123
-moguće je pristupiti dashboardu. Tamo je moguće vidjeti trenutne proizvode iz baze podataka, te istima ažurirati vrijednost ili ih obrisati. Također, moguće je kreirati novi proizvod, koji se prikazuje na popisu proizvoda iz baze te na početnoj stranici, gdje ih korisnik može naručiti.
+moguće je pristupiti dashboardu. Tamo je moguće vidjeti trenutne proizvode iz baze podataka, te istima ažurirati vrijednost ili ih obrisati. Nadalje, moguće je kreirati novi proizvod, koji se prikazuje na popisu proizvoda iz baze te na početnoj stranici, gdje ih korisnik može naručiti.
 Opcija za dohvaćanje narudžbi iz baze nije implementirana, a odabirom opcije za odjavu, uklanja se cookie kreiran tokom prijave i korisnik se vraća na obrazac za prijavu.
