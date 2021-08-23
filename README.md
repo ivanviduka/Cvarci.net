@@ -2,6 +2,8 @@
 
 Heroku link: https://cvarci--net.herokuapp.com/
 
+<b>Napomena:</> Ovdje se nalazi samo završeni projekt, razvojne faze i različite grane na kojima su se radili dijelove koda, nalaze se na privatnom repozitoriju u sklopu fakulteta. 
+
 Projekt je rađen u sklopu kolegija Web-programiranje u grupi od 3 studenta.
 
 Projekt prikazuje online trgovinu za kupnju čvaraka. Na početnoj stranici prikazuju se ponuđene vrste uz njihovu cijenu te mogućnost odabira količine. Proizvodi se dohvaćaju iz baze podataka. Klikom na gumb, proizvod se dodaje u košaricu, vidljivu na vrhu stranice, te se onemogućuje odabir istog proizvoda. Proizvode je moguće ukloniti iz košarice, čime se ponovno omogućuje njihovo dodavanje. Odabirom opcije Kupi sada u košarici, korisnik se prebacuje na novu stranicu, gdje vidi sadržaj svoje košarice, ukupnu cijenu te dodatne informacije koje mora ispuniti.
